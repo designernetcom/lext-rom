@@ -373,11 +373,13 @@
 
 
 .hero-slider 
-{ height: 100vh; 
+{ 
+  height: 100vh; 
 } 
 
 .hero-wrapper 
-{ height: 100vh; 
+{ 
+  height: 100vh; 
   display: flex; 
   align-items: center; 
   background-size: cover; 
@@ -388,7 +390,7 @@
 @media (max-width: 991px) 
 { 
   .hero-slider, .hero-wrapper { 
-    height: 60vh; 
+    height: 80vh; 
   } 
   
   .hero-wrapper { 
@@ -469,7 +471,7 @@
 /* Small Mobile Devices */ 
 @media (max-width: 480px) { 
   .hero-slider, .hero-wrapper { 
-    height: 24vh; 
+    height: 24vh !important; 
   } 
   
   .hero-wrapper { 
@@ -577,7 +579,7 @@ position: absolute;
 
   .hero-slider,
   .hero-wrapper {
-    height: 40vh;
+    height: 40vh !important;
   }
 
     .custom-arrow {

@@ -279,90 +279,74 @@
           <!--======  Start Hero Section  ======-->
 
           
-          <section class="orbia-hero_one">
+<section class="orbia-hero_one">
+
+  <!-- Swiper CSS -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
 
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <div class="swiper hero-slider">
+
     <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner1-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner1-new.png);">
+        </div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner2-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner2-new.png);">
+        </div>
       </div>
 
-      <!-- Slide 3 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner3-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner3-new.png);">
+        </div>
       </div>
 
-      <!-- Slide 6 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner8-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner8-new.png);">
+        </div>
       </div>
 
-       <!-- Slide 5 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner5-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner5-new.png);">
+        </div>
       </div>
 
-      <!-- Slide 4 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner4-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner4-new.png);">
+        </div>
       </div>
 
-     
-
-      <!-- Slide 6 -->
       <div class="swiper-slide">
-        <div
-          class="hero-wrapper bg_cover"
-          style="background-image: url(assets/images/products/banner6-new.png);"
-        ></div>
+        <div class="hero-wrapper"
+          style="background-image:url(assets/images/products/banner6-new.png);">
+        </div>
       </div>
-
-      
 
     </div>
 
-    <!-- LEFT ARROW -->
-<div class="swiper-button-prev custom-arrow"></div>
+    <!-- Navigation -->
+    <div class="swiper-button-prev custom-arrow"></div>
+    <div class="swiper-button-next custom-arrow"></div>
 
-<!-- RIGHT ARROW -->
-<div class="swiper-button-next custom-arrow"></div>
-
-    <!-- RIGHT SIDE NUMBER -->
+    <!-- Pagination -->
     <div class="custom-pagination">
       <span class="current-slide">01</span>
-      <span class="slash">-</span>
-      <span class="total-slide">06</span>
+      <span class="slash">/</span>
+      <span class="total-slide">07</span>
     </div>
 
   </div>
@@ -370,247 +354,271 @@
 
 <style>
 
+/* =========================
+   HERO SECTION
+========================= */
 
-
-.hero-slider 
-{ 
-  height: 100vh; 
-} 
-
-.hero-wrapper 
-{ 
-  height: 100vh; 
-  display: flex; 
-  align-items: center; 
-  background-size: cover; 
-  background-position: center; 
+.orbia-hero_one{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  /* margin-top: 100px; */
 }
 
-/* Tablet Responsive */ 
-@media (max-width: 991px) 
-{ 
-  .hero-slider, .hero-wrapper { 
-    height: 80vh; 
-  } 
-  
-  .hero-wrapper { 
-    padding: 60px 20px; 
-    background-position: center center; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content h1 { 
-    font-size: 40px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content>p { 
-    font-size: 18px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-    margin-right: 180px; 
-  } 
-  
-  .theme-btn { 
-    padding: 5px 10px; 
-  } 
-  
-  .theme-btn.gradient-btn { 
-    font-size: 16px; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content { 
-    padding-top: 0px; 
-  } 
-  
-  .orbia-hero_one { 
-    padding: 0; 
-    padding-top: 85px; 
-  } 
-} 
-
-/* Mobile Responsive */ 
-@media (max-width: 767px) { 
-
-  .hero-wrapper { 
-    padding: 40px 15px; 
-    align-items: center; 
-    text-align: center; 
-    background-position: center; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content h1 { 
-    font-size: 18px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content>p { 
-    font-size: 12px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-    margin-right: 130px; 
-  } 
-  
-  .theme-btn { 
-    padding: 5px 10px; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content { 
-    padding-top: 0px; 
-  
-} 
-
-.orbia-hero_one { 
-  padding: 0; 
-  padding-top: 85px; 
-} 
-
-} 
-
-/* Small Mobile Devices */ 
-@media (max-width: 480px) { 
-  .hero-slider, .hero-wrapper { 
-    height: 24vh !important; 
-  } 
-  
-  .hero-wrapper { 
-    padding: 30px 34px; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content h1 { 
-    font-size: 18px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content>p { 
-    font-size: 12px; 
-    margin-bottom: 10px; 
-    text-align: left; 
-    margin-right: 130px; 
-    line-height: 16px; 
-  } 
-  
-  .theme-btn { 
-    padding: 5px 10px; 
-  } 
-  
-  .orbia-hero_one .hero-wrapper .hero-content { 
-    padding-top: 0px; 
-  } 
-  
-  .orbia-hero_one { 
-    padding: 0; 
-    padding-top: 85px; 
-  } 
-  
-} 
-
-
-
-
-/* .hero-slider {
-  height: 100vh;
-  position: relative;
+.hero-slider{
+  width:100%;
+  height:100vh;
 }
 
-.hero-wrapper {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-} */
-
-/* LEFT & RIGHT ARROWS */
-.custom-arrow {
-  width: 40px !important;
-  height: 40px !important;
-  top: auto !important;
-  bottom: 30px !important;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  background: transparent;
-  color: #010101 !important;
-  transition: 0.3s;
+.hero-wrapper{
+  width:100%;
+  height:100vh;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
 }
 
-.custom-arrow::after {
-  font-size: 13px !important;
-  font-weight: bold;
+/* =========================
+   ARROWS
+========================= */
+
+.custom-arrow{
+  width:45px !important;
+  height:45px !important;
+  border-radius:50%;
+  border:1.5px solid rgba(255,255,255,0.7);
+  background:rgba(0,0,0,0.15);
+  backdrop-filter:blur(5px);
+  color:#fff !important;
+  transition:0.3s ease;
+  top:auto !important;
+  bottom:30px !important;
 }
 
-/* LEFT ARROW */
-.swiper-button-prev.custom-arrow {
-  left: 30px !important;
+.custom-arrow:hover{
+  background:#ffffff;
+  color:#000 !important;
 }
 
-/* RIGHT ARROW */
-.swiper-button-next.custom-arrow {
-  left: 105px !important;
-  right: auto !important;
+.custom-arrow::after{
+  font-size:14px !important;
+  font-weight:700;
 }
 
-/* HOVER */
-.custom-arrow:hover {
-  background: rgba(255,255,255,0.1);
+/* Left Arrow */
+.swiper-button-prev.custom-arrow{
+  left:30px !important;
 }
 
-/* RIGHT BOTTOM NUMBER */
-.custom-pagination {
-position: absolute;
-    right: 22px;
-    bottom: 4px;
-    z-index: 10;
-    color: #000000;
-    font-size: 12px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    letter-spacing: 2px;
+/* Right Arrow */
+.swiper-button-next.custom-arrow{
+  left:90px !important;
+  right:auto !important;
 }
 
-.custom-pagination .slash {
-  opacity: 0.6;
+/* =========================
+   CUSTOM PAGINATION
+========================= */
+
+.custom-pagination{
+  position:absolute;
+  right:30px;
+  bottom:40px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:2px;
 }
 
-/* MOBILE */
-@media (max-width: 767px) {
+.custom-pagination .slash{
+  opacity:0.6;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width:1600px){
 
   .hero-slider,
-  .hero-wrapper {
-    height: 40vh !important;
-  }
-
-    .custom-arrow {
-width: 25px !important;
-        height: 25px !important;
-        bottom: 8px !important;
-  }
-
-  .custom-arrow::after {
-    font-size: 9px !important;
-  }
-
-  .swiper-button-prev.custom-arrow {
-    left: 35px !important;
-  }
-
-  .swiper-button-next.custom-arrow {
-    left: 70px !important;
+  .hero-wrapper{
+    height:100vh;
   }
 
 }
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width:1200px){
+
+          .orbia-hero_one {
+    margin-top: 105px;
+}
+
+  .hero-slider,
+  .hero-wrapper{
+    height:105vh;
+  }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width:991px){
+
+        .orbia-hero_one {
+    margin-top: 105px;
+}
+
+  .hero-slider,
+  .hero-wrapper{
+    height:85vh;
+  }
+
+  .custom-arrow{
+    width:40px !important;
+    height:40px !important;
+    bottom:25px !important;
+  }
+
+  .swiper-button-prev.custom-arrow{
+    left:20px !important;
+  }
+
+  .swiper-button-next.custom-arrow{
+    left:75px !important;
+  }
+
+  .custom-pagination{
+    right:20px;
+    bottom:35px;
+    font-size:14px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:767px){
+
+      .orbia-hero_one {
+    margin-top: 105px;
+}
+
+  .hero-slider,
+  .hero-wrapper{
+    height:75vh;
+  }
+
+  .hero-wrapper{
+    background-position:center center;
+  }
+
+  .custom-arrow{
+    width:32px !important;
+    height:32px !important;
+    bottom:15px !important;
+  }
+
+  .custom-arrow::after{
+    font-size:10px !important;
+  }
+
+  .swiper-button-prev.custom-arrow{
+    left:15px !important;
+  }
+
+  .swiper-button-next.custom-arrow{
+    left:55px !important;
+  }
+
+  .custom-pagination{
+    right:15px;
+    bottom:22px;
+    font-size:12px;
+    letter-spacing:1px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+    .orbia-hero_one {
+    margin-top: 105px;
+}
+
+  .hero-slider,
+  .hero-wrapper{
+    height:32vh;
+  }
+
+  .custom-arrow{
+    width:28px !important;
+    height:28px !important;
+    bottom:10px !important;
+  }
+
+  .swiper-button-prev.custom-arrow{
+    left:10px !important;
+  }
+
+  .swiper-button-next.custom-arrow{
+    left:45px !important;
+  }
+
+  .custom-pagination{
+    right:10px;
+    bottom:16px;
+    font-size:11px;
+  }
+
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width:360px){
+
+  .orbia-hero_one {
+    margin-top: 100px;
+}
+
+  .hero-slider,
+  .hero-wrapper{
+    height:28vh;
+  }
+
+}
+
 </style>
 
 <script>
+
 var swiper = new Swiper(".hero-slider", {
+
   loop: true,
+
+  speed: 1000,
+
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
   },
-  speed: 1000,
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -618,25 +626,32 @@ var swiper = new Swiper(".hero-slider", {
   },
 
   on: {
+
     init: function () {
       updateSlideNumber(this);
     },
+
     slideChange: function () {
       updateSlideNumber(this);
     },
+
   },
+
 });
 
 function updateSlideNumber(swiper) {
+
   let current = swiper.realIndex + 1;
-  let total = swiper.slides.length - swiper.loopedSlides * 0;
+
+  let total = document.querySelectorAll(".hero-slider .swiper-slide:not(.swiper-slide-duplicate)").length;
 
   document.querySelector(".current-slide").textContent =
-    current < 10 ? "" + current : current;
+    current < 10 ? "0" + current : current;
 
   document.querySelector(".total-slide").textContent =
-    total < 10 ? "" + total : total;
+    total < 10 ? "0" + total : total;
 }
+
 </script>
 
 

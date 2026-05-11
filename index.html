@@ -278,16 +278,257 @@
         <main>
           <!--======  Start Hero Section  ======-->
 
-          
-<section class="orbia-hero_one">
 
-  <!-- Swiper CSS -->
+
+          <!-- ===== BOOTSTRAP RESPONSIVE BANNER SLIDER ===== -->
+<!-- Added custom arrows + right side pagination like reference image -->
+<!-- No existing class replaced -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="assets/images/products/banner1-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/products/banner2-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/products/banner3-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/products/banner4-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/products/banner5-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/products/banner6-new.png" class="d-block w-100" alt="banner">
+    </div>
+
+  </div>
+
+  <!-- LEFT ARROW -->
+  <button class="carousel-control-prev custom-arrow" type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev">
+
+    <span class="custom-arrow-icon">
+      &#10094;
+    </span>
+
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <!-- RIGHT ARROW -->
+  <button class="carousel-control-next custom-arrow" type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next">
+
+    <span class="custom-arrow-icon">
+      &#10095;
+    </span>
+
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <!-- CUSTOM PAGINATION -->
+  <div class="custom-pagination">
+    <span id="currentSlide">1</span>
+    <span>-</span>
+    <span id="totalSlides">3</span>
+  </div>
+
+</div>
+
+
+<style>
+  /* ===== SLIDER MAIN ===== */
+
+#carouselExampleControls {
+  margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px 40px 0 0;
+}
+
+/* Banner Images */
+#carouselExampleControls .carousel-item img {
+    width: 100%;
+   
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== CUSTOM ARROWS ===== */
+
+.custom-arrow {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    opacity: 1 !important;
+    top: auto;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left Arrow */
+.carousel-control-prev.custom-arrow {
+    left: 30px;
+}
+
+/* Right Arrow */
+.carousel-control-next.custom-arrow {
+    left: 100px;
+    right: auto;
+}
+
+.custom-arrow-icon {
+    color: #222;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Remove Bootstrap default icon */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+/* ===== RIGHT SIDE PAGINATION ===== */
+
+.custom-pagination {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+    z-index: 10;
+    color: #111;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Laptop */
+@media (max-width: 1200px) {
+
+    #carouselExampleControls .carousel-item img {
+       width: 100%;
+        object-fit: contain;
+        background: #fff;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    #carouselExampleControls .carousel-item img {
+      width: 100%;
+        object-fit: contain;
+        background: #fff;
+    }
+
+    .custom-arrow {
+        width: 48px;
+        height: 48px;
+        bottom: 20px;
+    }
+
+    .carousel-control-prev.custom-arrow {
+        left: 20px;
+    }
+
+    .carousel-control-next.custom-arrow {
+        left: 80px;
+    }
+
+    .custom-pagination {
+        right: 25px;
+        bottom: 28px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    #carouselExampleControls .carousel-item img {
+       width: 100%;
+        object-fit: contain;
+        background: #fff;
+    }
+
+    .custom-arrow {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+    }
+
+    .carousel-control-prev.custom-arrow {
+        left: 15px;
+    }
+
+    .carousel-control-next.custom-arrow {
+        left: 65px;
+    }
+
+    .custom-arrow-icon {
+        font-size: 18px;
+    }
+
+    .custom-pagination {
+        right: 15px;
+        bottom: 22px;
+        font-size: 14px;
+    }
+}
+</style>
+
+<!-- ===== PAGINATION SCRIPT ===== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const carousel = document.querySelector('#carouselExampleControls');
+    const items = document.querySelectorAll('.carousel-item');
+
+    const currentSlide = document.getElementById('currentSlide');
+    const totalSlides = document.getElementById('totalSlides');
+
+    totalSlides.innerText = items.length;
+
+    carousel.addEventListener('slid.bs.carousel', function () {
+
+        let activeIndex = document.querySelector('.carousel-item.active');
+        let index = [...items].indexOf(activeIndex);
+
+        currentSlide.innerText = index + 1;
+    });
+
+});
+</script>
+
+          
+<!-- <section class="orbia-hero_one">
+
+
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
 
-  <!-- Swiper JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <div class="swiper hero-slider">
@@ -338,11 +579,11 @@
 
     </div>
 
-    <!-- Navigation -->
+
     <div class="swiper-button-prev custom-arrow"></div>
     <div class="swiper-button-next custom-arrow"></div>
 
-    <!-- Pagination -->
+
     <div class="custom-pagination">
       <span class="current-slide">01</span>
       <span class="slash">/</span>
@@ -354,15 +595,12 @@
 
 <style>
 
-/* =========================
-   HERO SECTION
-========================= */
 
 .orbia-hero_one{
   width:100%;
   overflow:hidden;
   position:relative;
-  /* margin-top: 100px; */
+
 }
 
 .hero-slider{
@@ -378,9 +616,7 @@
   background-repeat:no-repeat;
 }
 
-/* =========================
-   ARROWS
-========================= */
+
 
 .custom-arrow{
   width:45px !important;
@@ -405,20 +641,16 @@
   font-weight:700;
 }
 
-/* Left Arrow */
 .swiper-button-prev.custom-arrow{
   left:30px !important;
 }
 
-/* Right Arrow */
+
 .swiper-button-next.custom-arrow{
   left:90px !important;
   right:auto !important;
 }
 
-/* =========================
-   CUSTOM PAGINATION
-========================= */
 
 .custom-pagination{
   position:absolute;
@@ -438,9 +670,6 @@
   opacity:0.6;
 }
 
-/* =========================
-   LARGE DESKTOP
-========================= */
 
 @media (min-width:1600px){
 
@@ -451,9 +680,6 @@
 
 }
 
-/* =========================
-   LAPTOP
-========================= */
 
 @media (max-width:1200px){
 
@@ -468,9 +694,6 @@
 
 }
 
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width:991px){
 
@@ -505,9 +728,6 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width:767px){
 
@@ -551,9 +771,6 @@
 
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
 
 @media (max-width:480px){
 
@@ -588,9 +805,6 @@
 
 }
 
-/* =========================
-   EXTRA SMALL DEVICES
-========================= */
 
 @media (max-width:360px){
 
@@ -652,7 +866,7 @@ function updateSlideNumber(swiper) {
     total < 10 ? "0" + total : total;
 }
 
-</script>
+</script> -->
 
 
           <!--======  Start About Section  ======-->
